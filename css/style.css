@@ -1,0 +1,30 @@
+:root {--main: tomato; --headerHeight: 100px;}
+* {box-sizing: border-box;}
+body {display: flex; align-items: center; flex-direction: column; margin: 0 1rem; min-height: 100svh; font-family: "Avenir Next", "Avenir", sans-serif;}
+a {color: #000; text-decoration: none;}
+header, main, footer {width: 100%; max-width: 1200px;}
+
+/* HEADER */
+header {display: flex; justify-content: space-between; height: var(--headerHeight); border-bottom: 3px solid var(--main);}
+.heading-1, .heading-2 {display: flex; justify-content: space-between; align-items: center; gap: 1rem;}
+
+/* MAIN */
+main {display: flex; justify-content: center; align-items: center; flex-grow: 1;}
+section {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 2rem; width: 100%;}
+
+/* FORM */
+form {display: flex; justify-content: center; align-items: center; flex-direction: column; gap: 2rem; width: 100%;}
+input[type="text"] {width: 100%; border: 1px solid #ccc; padding: 1rem; text-align: center; border-radius: 2rem;}
+input[type="text"]:focus {border-color: #66afe9; box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.075), 0px 0px 8px rgba(102, 175, 233, 0.6); outline: 0;}
+
+/* BUTTON */
+.button {align-self: flex-end; background: var(--main); border: 2px solid var(--main); color: #fff; padding: 1rem 2rem; cursor: pointer; border-radius: 2rem; transition: .5s;}
+.button:hover {animation: pulse 2s cubic-bezier(1, 0.5, 0.2, 1) both infinite; background: #fff; color: var(--main);}
+
+@keyframes pulse {
+  0% {box-shadow: var(--main) 0px 0px 0px 0px;}
+  100% {box-shadow: transparent 0px 0px 5rem 5rem;}
+}
+
+/* FOOTER */
+footer {display: flex; justify-content: space-between; border-top: 1px solid #ccc; font-size: .7rem;}
